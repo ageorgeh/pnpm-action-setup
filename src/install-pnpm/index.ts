@@ -7,21 +7,21 @@ import { promisify } from "util";
 export { runSelfInstaller };
 const execAsync = promisify(exec);
 
-export async function install(inputs: Inputs) {
+export async function install(inputs: Inputs): Promise<string | undefined> {
   try {
     await execAsync("pnpm --version");
     return;
   } catch {}
 
   startGroup("Running self-installer...");
-  const status = await runSelfInstaller(inputs);
+  const { exitCode, binDest } = await runSelfInstaller(inputs);
   endGroup();
 
-  if (status) {
-    return setFailed(
-      `Something went wrong, self-installer exits with code ${status}`,
-    );
+  if (exitCode) {
+    setFailed(`Something went wrong, self-installer exits with code ${exitCode}`);
+    return undefined;
   }
+  return binDest;
 }
 
 export default install;

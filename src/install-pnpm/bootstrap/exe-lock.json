@@ -5,17 +5,18 @@
   "packages": {
     "": {
       "dependencies": {
-        "@pnpm/exe": "11.0.0-beta.4-1"
+        "@pnpm/exe": "11.19.0"
       }
     },
     "node_modules/@pnpm/exe": {
-      "version": "11.0.0-beta.4-1",
-      "resolved": "https://registry.npmjs.org/@pnpm/exe/-/exe-11.0.0-beta.4-1.tgz",
-      "integrity": "sha512-2VzvynS54qE+Q0LGXzTCFKChq79Yr1xKLTAEkvIcBLoM+puRuI3xyrqtWx47esxhjbQlF0jRUyU8ISbSG92yBQ==",
+      "version": "11.19.0",
+      "resolved": "https://registry.npmjs.org/@pnpm/exe/-/exe-11.19.0.tgz",
+      "integrity": "sha512-P1mw8BZaNkEpttlyzKsxTj7PVs94bMB4cQ8pJhgbrCTSBP7xCzKS3VlOwIInS7aS5by6KAbfO5Vs9yK/ekugrg==",
       "hasInstallScript": true,
       "license": "MIT",
       "dependencies": {
-        "@reflink/reflink": "0.1.19"
+        "@reflink/reflink": "0.1.19",
+        "detect-libc": "^2.1.2"
       },
       "bin": {
         "pn": "pn",
@@ -27,18 +28,19 @@
         "url": "https://opencollective.com/pnpm"
       },
       "optionalDependencies": {
-        "@pnpm/linux-arm64": "11.0.0-beta.4-1",
-        "@pnpm/linux-x64": "11.0.0-beta.4-1",
-        "@pnpm/macos-arm64": "11.0.0-beta.4-1",
-        "@pnpm/macos-x64": "11.0.0-beta.4-1",
-        "@pnpm/win-arm64": "11.0.0-beta.4-1",
-        "@pnpm/win-x64": "11.0.0-beta.4-1"
+        "@pnpm/linux-arm64": "11.19.0",
+        "@pnpm/linux-x64": "11.19.0",
+        "@pnpm/linuxstatic-arm64": "11.19.0",
+        "@pnpm/linuxstatic-x64": "11.19.0",
+        "@pnpm/macos-arm64": "11.19.0",
+        "@pnpm/win-arm64": "11.19.0",
+        "@pnpm/win-x64": "11.19.0"
       }
     },
     "node_modules/@pnpm/linux-arm64": {
-      "version": "11.0.0-beta.4-1",
-      "resolved": "https://registry.npmjs.org/@pnpm/linux-arm64/-/linux-arm64-11.0.0-beta.4-1.tgz",
-      "integrity": "sha512-aPf2hhCwWQQ1vNm3Sxq6BLtqnvv6eZ8iJq/oqJOm2WFzq9l59jbmn0eaUtDOlafjfzkijqg+cj46h0XT2Dqsfw==",
+      "version": "11.19.0",
+      "resolved": "https://registry.npmjs.org/@pnpm/linux-arm64/-/linux-arm64-11.19.0.tgz",
+      "integrity": "sha512-c5AJqnsj0BMqMCOtctOzsCqyfY+afFe1kdM9F2FrNhYwtnQRMHoJy+51qfee4yuTPOVRyk3Yh1dwvyAadiznvA==",
       "cpu": [
         "arm64"
       ],
@@ -52,9 +54,9 @@
       }
     },
     "node_modules/@pnpm/linux-x64": {
-      "version": "11.0.0-beta.4-1",
-      "resolved": "https://registry.npmjs.org/@pnpm/linux-x64/-/linux-x64-11.0.0-beta.4-1.tgz",
-      "integrity": "sha512-1hTcyZSVJWpPNHs3u7RbfbAmZXPBLIZQVt/z1XjcDnzI8S49NGIvir876/gq9jL69ZPoE1a6z+qSe3zUPmw0ng==",
+      "version": "11.19.0",
+      "resolved": "https://registry.npmjs.org/@pnpm/linux-x64/-/linux-x64-11.19.0.tgz",
+      "integrity": "sha512-KOKpA9o75SvmRQgWO+EqEpQzJg1b9uHk5y61PAx90sSpdYtKDPua2eBXBglzv8YK1xM3DsYXFEf7Scs+3HeDsA==",
       "cpu": [
         "x64"
       ],
@@ -67,10 +69,48 @@
         "url": "https://opencollective.com/pnpm"
       }
     },
+    "node_modules/@pnpm/linuxstatic-arm64": {
+      "version": "11.19.0",
+      "resolved": "https://registry.npmjs.org/@pnpm/linuxstatic-arm64/-/linuxstatic-arm64-11.19.0.tgz",
+      "integrity": "sha512-Ci9WxgCInZc3F43R6BfaHevi+dYqaI5CLi6421egFsK649eHvYPytvu+zABhTNlYGNJbD8j9w+AUYInz/TPsyQ==",
+      "cpu": [
+        "arm64"
+      ],
+      "libc": [
+        "musl"
+      ],
+      "license": "MIT",
+      "optional": true,
+      "os": [
+        "linux"
+      ],
+      "funding": {
+        "url": "https://opencollective.com/pnpm"
+      }
+    },
+    "node_modules/@pnpm/linuxstatic-x64": {
+      "version": "11.19.0",
+      "resolved": "https://registry.npmjs.org/@pnpm/linuxstatic-x64/-/linuxstatic-x64-11.19.0.tgz",
+      "integrity": "sha512-GNMk96vNJ4uEWigekarjHofXNDFsTYRL0Mw2YlDkv/W+u0cn/UAVPHfd5aAfsf6Arel2ZQfxPUTXlpunFujWnA==",
+      "cpu": [
+        "x64"
+      ],
+      "libc": [
+        "musl"
+      ],
+      "license": "MIT",
+      "optional": true,
+      "os": [
+        "linux"
+      ],
+      "funding": {
+        "url": "https://opencollective.com/pnpm"
+      }
+    },
     "node_modules/@pnpm/macos-arm64": {
-      "version": "11.0.0-beta.4-1",
-      "resolved": "https://registry.npmjs.org/@pnpm/macos-arm64/-/macos-arm64-11.0.0-beta.4-1.tgz",
-      "integrity": "sha512-7iJdDfWaRWeoGBvU3gJcxbReYM83IhiWFZPHMSW+ga44W/qTzczYIeGeCorsxQRKBPnw2qK3hh9bevkyX6XOWw==",
+      "version": "11.19.0",
+      "resolved": "https://registry.npmjs.org/@pnpm/macos-arm64/-/macos-arm64-11.19.0.tgz",
+      "integrity": "sha512-I3Ee/GQlPxEOeBSzqxBNwcTHxVebjMiN2xLdTBS6OK2TAPzbWMIExjU5brxhr8rAk73p7mbv/a/2tFC/3gl6FA==",
       "cpu": [
         "arm64"
       ],
@@ -83,26 +123,10 @@
         "url": "https://opencollective.com/pnpm"
       }
     },
-    "node_modules/@pnpm/macos-x64": {
-      "version": "11.0.0-beta.4-1",
-      "resolved": "https://registry.npmjs.org/@pnpm/macos-x64/-/macos-x64-11.0.0-beta.4-1.tgz",
-      "integrity": "sha512-wREXbc2hrSd6r/dyPYuFIkkFoIbtmke5rlJrcITe65OvIQmSW+Fp3X8PBIYcnx3lJyk4809YlqI184yovUaMZA==",
-      "cpu": [
-        "x64"
-      ],
-      "license": "MIT",
-      "optional": true,
-      "os": [
-        "darwin"
-      ],
-      "funding": {
-        "url": "https://opencollective.com/pnpm"
-      }
-    },
     "node_modules/@pnpm/win-arm64": {
-      "version": "11.0.0-beta.4-1",
-      "resolved": "https://registry.npmjs.org/@pnpm/win-arm64/-/win-arm64-11.0.0-beta.4-1.tgz",
-      "integrity": "sha512-ygHjDdc0h2uCIcBa30Cnd2ciGWFNC0qm2t0w88PYEC/1rmbGCDfqeGtf/8R8THzTVOuw/pOzIDTs6QEhB6aPOg==",
+      "version": "11.19.0",
+      "resolved": "https://registry.npmjs.org/@pnpm/win-arm64/-/win-arm64-11.19.0.tgz",
+      "integrity": "sha512-rOiWuJ9wjaFY9ZDVPGVjpvjIQHZNB72rioxvuyzDKJ7dqKQ97VF27a4rmOtjhMB5u83cdDGEJ+OY+H1+TP+frw==",
       "cpu": [
         "arm64"
       ],
@@ -116,9 +140,9 @@
       }
     },
     "node_modules/@pnpm/win-x64": {
-      "version": "11.0.0-beta.4-1",
-      "resolved": "https://registry.npmjs.org/@pnpm/win-x64/-/win-x64-11.0.0-beta.4-1.tgz",
-      "integrity": "sha512-//5eHf7Zw4MtgJhlD4VUbemngxMnhwySgZNGu0ngkNBRVjnESE7NoXZZ5kHIdatv6VQpqkCthNZrheaiJedSGw==",
+      "version": "11.19.0",
+      "resolved": "https://registry.npmjs.org/@pnpm/win-x64/-/win-x64-11.19.0.tgz",
+      "integrity": "sha512-l26XeTxoGxfU+mVcZ5jFdP9hNe5yrOlLPSkAlwwpXPI1iyyU4JUSxm6Jdyxu1UAU1FerD/BvLK2vrlR6d9ogag==",
       "cpu": [
         "x64"
       ],
@@ -189,6 +213,9 @@
       "cpu": [
         "arm64"
       ],
+      "libc": [
+        "glibc"
+      ],
       "license": "MIT",
       "optional": true,
       "os": [
@@ -204,6 +231,9 @@
       "integrity": "sha512-37iO/Dp6m5DDaC2sf3zPtx/hl9FV3Xze4xoYidrxxS9bgP3S8ALroxRK6xBG/1TtfXKTvolvp+IjrUU6ujIGmA==",
       "cpu": [
         "arm64"
+      ],
+      "libc": [
+        "musl"
       ],
       "license": "MIT",
       "optional": true,
@@ -221,6 +251,9 @@
       "cpu": [
         "x64"
       ],
+      "libc": [
+        "glibc"
+      ],
       "license": "MIT",
       "optional": true,
       "os": [
@@ -236,6 +269,9 @@
       "integrity": "sha512-e9FBWDe+lv7QKAwtKOt6A2W/fyy/aEEfr0g6j/hWzvQcrzHCsz07BNQYlNOjTfeytrtLU7k449H1PI95jA4OjQ==",
       "cpu": [
         "x64"
+      ],
+      "libc": [
+        "musl"
       ],
       "license": "MIT",
       "optional": true,
@@ -276,6 +312,15 @@
       ],
       "engines": {
         "node": ">= 10"
+      }
+    },
+    "node_modules/detect-libc": {
+      "version": "2.1.2",
+      "resolved": "https://registry.npmjs.org/detect-libc/-/detect-libc-2.1.2.tgz",
+      "integrity": "sha512-Btj2BOOO83o3WyH59e8MgXsxEQVcarkUOpEYrubB0urwnN10yQ364rsiByU11nZlqWYZm05i/of7io4mzihBtQ==",
+      "license": "Apache-2.0",
+      "engines": {
+        "node": ">=8"
       }
     }
   }
